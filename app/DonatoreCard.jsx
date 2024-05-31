@@ -1,6 +1,6 @@
 export default function DonatoreCard ({ nome, carta, attivo}) {
     return (
-        <main className="bg-zinc-500 text-sky-800">
+        <main className="bg-zinc-500 text-sky-800 px-5 py-5">
             <p className="pb-5">{nome}</p>
             <p className="pb-5">{carta}</p>
             {attivo ? <p>🟢</p> : <p>🔴</p>}

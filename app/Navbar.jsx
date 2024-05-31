@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Navbar () {
+export default function Navbar ({loggedIn}) {
     return (
         <>
             <div className="w-full h-20 bg-red-800 sticky top-0">
@@ -8,7 +8,7 @@ export default function Navbar () {
                     <div className="flex justify-between items-center h-full">
                         <ul className="hidden md:flex gap-x-6 text-white">
                             <li><Link href="/">HOME</Link></li>
-                            <li><Link href="/pannello">PANNELLO</Link></li>
+                            {loggedIn ? <li><Link href="/pannello">PANNELLO</Link></li> : <li><Link className="hidden" href="/pannello">PANNELLO</Link></li>}
                             <li><Link href="/login">LOGIN</Link></li>
                         </ul>
                     </div>
